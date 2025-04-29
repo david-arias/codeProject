@@ -4,8 +4,11 @@ import { useState, useEffect } from "react";
 import Loader from "./comps/Loader/Loader";
 
 async function servHealth() {
+    // let url = "http://localhost:3001";
+    let url = "https://codeproject.onrender.com";
+
     try {
-        const response = await fetch("http://localhost:3001/api/health", {
+        const response = await fetch(`${url}/api/health`, {
             method: "GET",
         });
         if (!response.ok) {

@@ -30,6 +30,16 @@ app.use(bodyParser.json());
 // CORS
 app.use(cors());
 
+// CHECK STATUS
+app.get("/api/health", (req, res) => {
+    res.status(200).send({
+        status: "success",
+        message: "server is OK",
+        safe: true,
+        loader: false,
+    });
+});
+
 // ROUTES
 app.use("/api/users", usersRoutes);
 

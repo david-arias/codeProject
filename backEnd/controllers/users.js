@@ -6,7 +6,7 @@ const User = require("../models/users");
 
 let controller = {
     getUsers: (req, res) => {
-        Clan.find({})
+        User.find({})
             .exec()
             .then((data) => {
                 // if send success

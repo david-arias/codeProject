@@ -21,6 +21,7 @@ const dbUrl = `mongodb+srv://${mongoUser.user}:${mongoUser.pass}@wordofdarkness.
 mongoose.Promise = global.Promise;
 
 // ROUTES DECLARE
+const usersRoutes = require("./routes/users");
 
 // body parser load
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -30,6 +31,7 @@ app.use(bodyParser.json());
 app.use(cors());
 
 // ROUTES
+app.use("/api/users", usersRoutes);
 
 mongoose
     .connect(dbUrl)

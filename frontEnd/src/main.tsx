@@ -2,6 +2,7 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 
 import Debug from "./comps/Debug/Debug";
+import "./assets/css/main.css";
 import "./assets/css/reset.css";
 
 import App from "./App.tsx";

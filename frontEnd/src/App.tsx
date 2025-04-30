@@ -2,6 +2,7 @@ import "./App.css";
 import { useState, useEffect } from "react";
 
 import Loader from "./comps/Loader/Loader";
+import Login from "./pages/Login/Login";
 
 async function servHealth() {
     let url = "http://localhost:3001";
@@ -46,7 +47,9 @@ function App() {
 
     return (
         <>
-            <div className="wrap">content</div>
+            <div className="wrap">
+                <Login />
+            </div>
         </>
     );
 }
